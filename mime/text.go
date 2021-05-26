@@ -14,6 +14,9 @@ const (
 	// .txt: plain text (ASCII, ISO 8859-n)
 	TEXT_PLAIN = "text/plain"
 
+	// http only
+	TEXT_YAML = "text/yaml"
+
 	// aliases/alternatives
 
 	TEXT_HTM = TEXT_HTML
@@ -29,5 +32,6 @@ func GetTextMIMETypes() []string {
 		TEXT_ICS,
 		TEXT_JS,
 		TEXT_PLAIN,
+		TEXT_YAML,
 	}
 }
