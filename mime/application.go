@@ -78,6 +78,13 @@ const (
 	// .zip: zip archive
 	APPLICATION_ZIP = "application/zip"
 
+	// http only
+
+	// extensible data notation
+	APPLICATION_EDN = "application/edn"
+	// form data encoded into url query parameter key/values
+	APPLICATION_FORM_URL_ENCODED = "application/x-www-form-urlencoded"
+
 	// aliases/alternatives
 
 	APPLICATION_EXCEL        = APPLICATION_XLS
@@ -104,10 +111,12 @@ func GetApplicationMIMETypes() []string {
 		APPLICATION_CSH,
 		APPLICATION_DOC,
 		APPLICATION_DOCX,
+		APPLICATION_EDN,
 		APPLICATION_EOT,
 		APPLICATION_EPUB,
 		APPLICATION_EXCEL,
 		APPLICATION_EXCEL_X,
+		APPLICATION_FORM_URL_ENCODED,
 		APPLICATION_GZ,
 		APPLICATION_JAR,
 		APPLICATION_JSON,
