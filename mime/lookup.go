@@ -38,7 +38,7 @@ func LookupByFileExtension(extension string, rootType RootType) (mime string, er
 		mimeTypeSlice = GetFontMIMETypes()
 	case ROOT_TYPE_IMAGE:
 		mimeTypeSlice = GetImageMIMETypes()
-	// case ROOT_TYPE_MULTIPART:
+	// case ROOT_TYPE_MULTIPART: // multipart/form does not have a file extension
 	// 	mimeTypeSlice = GetMultipartMIMETypes()
 	case ROOT_TYPE_TEXT:
 		mimeTypeSlice = GetTextMIMETypes()
