@@ -8,6 +8,7 @@ import (
 	stdMime "mime"
 )
 
+// Root of any given MIME type (ie: {RootType}/*).
 type RootType string
 
 // Used to scope MIME type lookups.
@@ -31,19 +32,19 @@ func LookupByFileExtension(extension string, rootType RootType) (mime string, er
 	var mimeTypeSlice []string
 	switch rootType {
 	case ROOT_TYPE_APPLICATION:
-		mimeTypeSlice = GetApplicationMIMETypes()
+		mimeTypeSlice = ApplicationMIMETypes
 	case ROOT_TYPE_AUDIO:
-		mimeTypeSlice = GetAudioMIMETypes()
+		mimeTypeSlice = AudioMIMETypes
 	case ROOT_TYPE_FONT:
-		mimeTypeSlice = GetFontMIMETypes()
+		mimeTypeSlice = FontMIMETypes
 	case ROOT_TYPE_IMAGE:
-		mimeTypeSlice = GetImageMIMETypes()
+		mimeTypeSlice = ImageMIMETypes
 	// case ROOT_TYPE_MULTIPART: // multipart/form does not have a file extension
 	// 	mimeTypeSlice = GetMultipartMIMETypes()
 	case ROOT_TYPE_TEXT:
-		mimeTypeSlice = GetTextMIMETypes()
+		mimeTypeSlice = TextMIMETypes
 	case ROOT_TYPE_VIDEO:
-		mimeTypeSlice = GetVideoMIMETypes()
+		mimeTypeSlice = VideoMIMETypes
 	default:
 		invalidRootTypeErrorMessage := fmt.Sprintf("could not retrieve list of MIME types for '%s' - please use the mime.ROOT_TYPE_* constants for this lookup", rootType)
 		return "", errors.New(invalidRootTypeErrorMessage)
