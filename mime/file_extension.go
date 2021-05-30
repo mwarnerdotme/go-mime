@@ -14,7 +14,7 @@ var FileExtensions = func() []FileExtension {
 	fe = append(fe, VideoFileExtensions...)
 
 	return fe
-}
+}()
 
 func (fe *FileExtension) String() string {
 	return string(*fe)
