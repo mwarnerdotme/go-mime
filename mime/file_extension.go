@@ -1,7 +1,9 @@
 package mime
 
+// A file extension (ex: .json).
 type FileExtension string
 
+// Slice containing all available file extensions.
 var FileExtensions = func() []FileExtension {
 	var fe []FileExtension
 
@@ -16,6 +18,7 @@ var FileExtensions = func() []FileExtension {
 	return fe
 }()
 
+// Returns the FileExtension as a string.
 func (fe *FileExtension) String() string {
 	return string(*fe)
 }
