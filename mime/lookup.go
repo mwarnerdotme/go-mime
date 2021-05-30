@@ -3,7 +3,6 @@ package mime
 import (
 	"errors"
 	"fmt"
-	"strings"
 
 	stdMIME "mime"
 )
@@ -13,34 +12,33 @@ Finds the best MIME type based on the provided extension and file type.
 
 File types can be found in the same package (mime.ROOT_TYPE_*). They correspond to the roots of MIME types like application, image, text, etc.
 */
-func LookupByFileExtension(extension FileExtension, rootType RootType) (mime string, err error) {
-	// get appropriate slice of MIME types
-	var mimeTypeSlice []MIMEType
+func LookupByFileExtension(extension FileExtension, rootType RootType) (string, error) {
+	// get appropriate MIMETypeMap
+	var mtm MIMETypeMap
 	switch rootType {
 	case ROOT_TYPE_APPLICATION:
-		mimeTypeSlice = ApplicationMIMETypes
+		mtm = ApplicationMIMETypeMap
 	case ROOT_TYPE_AUDIO:
-		mimeTypeSlice = AudioMIMETypes
+		mtm = AudioMIMETypeMap
 	case ROOT_TYPE_FONT:
-		mimeTypeSlice = FontMIMETypes
+		mtm = FontMIMETypeMap
 	case ROOT_TYPE_IMAGE:
-		mimeTypeSlice = ImageMIMETypes
-	// case ROOT_TYPE_MULTIPART: // multipart/form does not have a file extension
-	// 	mimeTypeSlice = GetMultipartMIMETypes()
+		mtm = ImageMIMETypeMap
+	case ROOT_TYPE_MULTIPART:
+		mtm = MultipartMIMETypeMap
 	case ROOT_TYPE_TEXT:
-		mimeTypeSlice = TextMIMETypes
+		mtm = TextMIMETypeMap
 	case ROOT_TYPE_VIDEO:
-		mimeTypeSlice = VideoMIMETypes
+		mtm = VideoMIMETypeMap
 	default:
 		invalidRootTypeErrorMessage := fmt.Sprintf("could not retrieve list of MIME types for '%s' - please use the mime.ROOT_TYPE_* constants for this lookup", rootType)
 		return "", errors.New(invalidRootTypeErrorMessage)
 	}
 
-	// get the best matching MIME type
-	for i := range mimeTypeSlice {
-		if strings.Contains(mimeTypeSlice[i].String(), strings.Trim(extension.String(), ".")) {
-			return mimeTypeSlice[i].String(), nil
-		}
+	// get the MIME type from the map
+	if mtm[extension] != "" {
+		mt := mtm[extension]
+		return mt.String(), nil
 	}
 
 	// use std 'mime' package as a backup
@@ -60,12 +58,11 @@ Finds the best MIME type based on the provided extension.
 
 May return a mime type from an inappropriate root type. To fix this, use mime.LookupByFileExtension to apply a root type scope.
 */
-func LookupByFileExtensionSimple(extension FileExtension) (mime string, err error) {
-	// get the best matching MIME type
-	for i := range MIMETypes {
-		if strings.Contains(MIMETypes[i].String(), strings.Trim(extension.String(), ".")) {
-			return MIMETypes[i].String(), nil
-		}
+func LookupByFileExtensionSimple(extension FileExtension) (string, error) {
+	// get the MIME type from the aggregate map
+	if Map[extension] != "" {
+		mt := Map[extension]
+		return mt.String(), nil
 	}
 
 	// use std 'mime' package as a backup
