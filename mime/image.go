@@ -6,21 +6,21 @@ Image MIME types
 
 const (
 	// .bmp: windows bitmap graphics
-	IMAGE_BMP MimeType = "image/bmp"
+	IMAGE_BMP MIMEType = "image/bmp"
 	// .gif: graphics interchange
-	IMAGE_GIF MimeType = "image/gif"
+	IMAGE_GIF MIMEType = "image/gif"
 	// .ico: icon
-	IMAGE_ICO MimeType = "image/vnd.microsoft.icon"
+	IMAGE_ICO MIMEType = "image/vnd.microsoft.icon"
 	// .jpeg: jpeg images
-	IMAGE_JPEG MimeType = "image/jpeg"
+	IMAGE_JPEG MIMEType = "image/jpeg"
 	// .png: portable network graphics
-	IMAGE_PNG MimeType = "image/png"
+	IMAGE_PNG MIMEType = "image/png"
 	// .svg: scalable vector graphics
-	IMAGE_SVG MimeType = "image/svg+xml"
+	IMAGE_SVG MIMEType = "image/svg+xml"
 	// .tiff: tagged image file
-	IMAGE_TIFF MimeType = "image/tiff"
+	IMAGE_TIFF MIMEType = "image/tiff"
 	// .webp: webp image
-	IMAGE_WEBP MimeType = "image/webp"
+	IMAGE_WEBP MIMEType = "image/webp"
 )
 
 // aliases/alternatives
@@ -37,7 +37,7 @@ Image content types (HTTP only MIME types) - no file extension
 const ()
 
 // slice containing all available image MIME types
-var ImageMIMETypes = []MimeType{
+var ImageMIMETypes = []MIMEType{
 	IMAGE_BMP,
 	IMAGE_GIF,
 	IMAGE_ICO,

@@ -30,11 +30,11 @@ func (rt *RootType) String() string {
 }
 
 // A MIME type (content type in HTTP).
-type MimeType string
+type MIMEType string
 
 // Slice containing all available MIME types
-var MimeTypes = func() []MimeType {
-	var mt []MimeType
+var MIMETypes = func() []MIMEType {
+	var mt []MIMEType
 
 	mt = append(mt, ApplicationMIMETypes...)
 	mt = append(mt, AudioMIMETypes...)
@@ -48,6 +48,6 @@ var MimeTypes = func() []MimeType {
 }()
 
 // Returns the mime type as a string.
-func (mt *MimeType) String() string {
+func (mt *MIMEType) String() string {
 	return string(*mt)
 }

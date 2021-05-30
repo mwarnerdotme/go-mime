@@ -6,25 +6,25 @@ Audio MIME types
 
 const (
 	// .3g2: audio/video container
-	AUDIO_3G2 MimeType = "audio/3gpp2"
+	AUDIO_3G2 MIMEType = "audio/3gpp2"
 	// .3gp: audio/video container
-	AUDIO_3GP MimeType = "audio/3gpp"
+	AUDIO_3GP MIMEType = "audio/3gpp"
 	// .aac: aac audio
-	AUDIO_AAC MimeType = "audio/aac"
+	AUDIO_AAC MIMEType = "audio/aac"
 	// .midi: musical insrument digital interface
-	AUDIO_MIDI MimeType = "audio/midi"
+	AUDIO_MIDI MIMEType = "audio/midi"
 	// .mp3: mp3 audio
-	AUDIO_MP3 MimeType = "audio/mpeg"
+	AUDIO_MP3 MIMEType = "audio/mpeg"
 	// .oga: ogg audio
-	AUDIO_OGA MimeType = "audio/ogg"
+	AUDIO_OGA MIMEType = "audio/ogg"
 	// .opus: opus audio
-	AUDIO_OPUS MimeType = "audio/opus"
+	AUDIO_OPUS MIMEType = "audio/opus"
 	// .wav: waveform audio
-	AUDIO_WAV MimeType = "audio/wav"
+	AUDIO_WAV MIMEType = "audio/wav"
 	// .weba: webm audio
-	AUDIO_WEBA MimeType = "audio/webm"
+	AUDIO_WEBA MIMEType = "audio/webm"
 	// .midi: musical insrument digital interface
-	AUDIO_X_MIDI MimeType = "audio/x-midi"
+	AUDIO_X_MIDI MIMEType = "audio/x-midi"
 )
 
 // aliases/alternatives
@@ -42,7 +42,7 @@ Audio content types (HTTP only MIME types) - no file extension
 const ()
 
 // slice containing all available audio MIME types
-var AudioMIMETypes = []MimeType{
+var AudioMIMETypes = []MIMEType{
 	AUDIO_3G2,
 	AUDIO_3GP,
 	AUDIO_AAC,

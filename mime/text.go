@@ -6,19 +6,19 @@ Text MIME types
 
 const (
 	// .css: cascading style sheet
-	TEXT_CSS MimeType = "text/css"
+	TEXT_CSS MIMEType = "text/css"
 	// .csv: comma-separated values
-	TEXT_CSV MimeType = "text/csv"
+	TEXT_CSV MIMEType = "text/csv"
 	// .html: hypertext markup language
-	TEXT_HTML MimeType = "text/html"
+	TEXT_HTML MIMEType = "text/html"
 	// .ics: iCalendar
-	TEXT_ICS MimeType = "text/calendar"
+	TEXT_ICS MIMEType = "text/calendar"
 	// .js: javascript
-	TEXT_JS MimeType = "text/javascript"
+	TEXT_JS MIMEType = "text/javascript"
 	// .txt: plain text (ASCII, ISO 8859-n)
-	TEXT_PLAIN MimeType = "text/plain"
+	TEXT_PLAIN MIMEType = "text/plain"
 	// .yaml: YAML ain't markup language
-	TEXT_YAML MimeType = "text/yaml"
+	TEXT_YAML MIMEType = "text/yaml"
 )
 
 // aliases/alternatives
@@ -35,7 +35,7 @@ Text content types (HTTP only MIME types) - no file extension
 const ()
 
 // slice containing all available text MIME types
-var TextMIMETypes = []MimeType{
+var TextMIMETypes = []MIMEType{
 	TEXT_CSS,
 	TEXT_CSV,
 	TEXT_HTML,

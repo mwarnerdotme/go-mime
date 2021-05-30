@@ -6,13 +6,13 @@ Font MIME types
 
 const (
 	// otf: opentype font
-	FONT_OTF MimeType = "font/otf"
+	FONT_OTF MIMEType = "font/otf"
 	// ttf: truetype font
-	FONT_TTF MimeType = "font/ttf"
+	FONT_TTF MIMEType = "font/ttf"
 	// woff: web open font
-	FONT_WOFF MimeType = "font/woff"
+	FONT_WOFF MIMEType = "font/woff"
 	// woff2: web open font (version 2)
-	FONT_WOFF2 MimeType = "font/woff2"
+	FONT_WOFF2 MIMEType = "font/woff2"
 )
 
 // aliases/alternatives
@@ -26,7 +26,7 @@ Font content types (HTTP only MIME types) - no file extension
 const ()
 
 // slice containing all available font MIME types
-var FontMIMETypes = []MimeType{
+var FontMIMETypes = []MIMEType{
 	FONT_OTF,
 	FONT_TTF,
 	FONT_WOFF,

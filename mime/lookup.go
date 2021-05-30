@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	stdMime "mime"
+	stdMIME "mime"
 )
 
 /*
@@ -15,7 +15,7 @@ File types can be found in the same package (mime.CORE_TYPE_*). They correspond 
 */
 func LookupByFileExtension(extension string, rootType RootType) (mime string, err error) {
 	// get appropriate slice of MIME types
-	var mimeTypeSlice []MimeType
+	var mimeTypeSlice []MIMEType
 	switch rootType {
 	case ROOT_TYPE_APPLICATION:
 		mimeTypeSlice = ApplicationMIMETypes
@@ -47,7 +47,7 @@ func LookupByFileExtension(extension string, rootType RootType) (mime string, er
 	}
 
 	// use std 'mime' package as a backup
-	backupMIMEType := stdMime.TypeByExtension(fmt.Sprintf(".%s", extension))
+	backupMIMEType := stdMIME.TypeByExtension(fmt.Sprintf(".%s", extension))
 
 	if backupMIMEType != "" {
 		return backupMIMEType, nil
@@ -68,14 +68,14 @@ func LookupByFileExtensionSimple(extension string) (mime string, err error) {
 	extension = strings.Trim(extension, ".")
 
 	// get the best matching MIME type
-	for i := range MimeTypes {
-		if strings.Contains(MimeTypes[i].String(), extension) {
-			return MimeTypes[i].String(), nil
+	for i := range MIMETypes {
+		if strings.Contains(MIMETypes[i].String(), extension) {
+			return MIMETypes[i].String(), nil
 		}
 	}
 
 	// use std 'mime' package as a backup
-	backupMIMEType := stdMime.TypeByExtension(fmt.Sprintf(".%s", extension))
+	backupMIMEType := stdMIME.TypeByExtension(fmt.Sprintf(".%s", extension))
 
 	if backupMIMEType != "" {
 		return backupMIMEType, nil

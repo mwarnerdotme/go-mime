@@ -6,11 +6,11 @@ import (
 	"gitlab.com/mwarnerdotme/go-mime/mime"
 )
 
-func TestUnitMimeTypeString(t *testing.T) {
-	testMimeType := mime.APPLICATION_JSON
-	testMimeTypeString := "application/json"
+func TestUnitMIMETypeString(t *testing.T) {
+	testMIMEType := mime.APPLICATION_JSON
+	testMIMETypeString := "application/json"
 
-	if testMimeType.String() != testMimeTypeString {
+	if testMIMEType.String() != testMIMETypeString {
 		t.Fatal("could not successfully return the mime type as a string")
 	}
 }

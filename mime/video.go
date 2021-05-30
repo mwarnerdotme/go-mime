@@ -6,21 +6,21 @@ Video MIME types
 
 const (
 	// .3g2: audio/video container
-	VIDEO_3G2 MimeType = "video/3gpp2"
+	VIDEO_3G2 MIMEType = "video/3gpp2"
 	// .3gp: audio/video container
-	VIDEO_3GP MimeType = "video/3gpp"
+	VIDEO_3GP MIMEType = "video/3gpp"
 	// .avi: audio video interleave
-	VIDEO_AVI MimeType = "video/x-msvideo"
+	VIDEO_AVI MIMEType = "video/x-msvideo"
 	// .mp4: mp4 video
-	VIDEO_MP4 MimeType = "video/mp4"
+	VIDEO_MP4 MIMEType = "video/mp4"
 	// .mpeg: mpeg video
-	VIDEO_MPEG MimeType = "video/mpeg"
+	VIDEO_MPEG MIMEType = "video/mpeg"
 	// .ogv: ogg video
-	VIDEO_OGV MimeType = "video/ogg"
+	VIDEO_OGV MIMEType = "video/ogg"
 	// .ts: mpeg transport stream
-	VIDEO_TS MimeType = "video/mp2t"
+	VIDEO_TS MIMEType = "video/mp2t"
 	// .webm: webm video
-	VIDEO_WEBM MimeType = "video/webm"
+	VIDEO_WEBM MIMEType = "video/webm"
 )
 
 // aliases/alternatives
@@ -36,7 +36,7 @@ Video content types (HTTP only MIME types) - no file extension
 const ()
 
 // slice containing all available video MIME types
-var VideoMIMETypes = []MimeType{
+var VideoMIMETypes = []MIMEType{
 	VIDEO_3G2,
 	VIDEO_3GP,
 	VIDEO_AVI,

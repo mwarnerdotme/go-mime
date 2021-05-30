@@ -16,11 +16,11 @@ Multipart content types (HTTP only MIME types) - no file extension
 
 const (
 	// multipart form data
-	MULTIPART_FORM MimeType = "multipart/form-data"
+	MULTIPART_FORM MIMEType = "multipart/form-data"
 )
 
 // slice containing all available multipart MIME types
-var MultipartMIMETypes = []MimeType{
+var MultipartMIMETypes = []MIMEType{
 	MULTIPART_FORM,
 }
 
