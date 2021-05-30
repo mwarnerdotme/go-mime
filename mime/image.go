@@ -65,4 +65,14 @@ const (
 )
 
 // slice containing all available image file extensions
-var ImageFileExtensions = []FileExtension{}
+var ImageFileExtensions = []FileExtension{
+	EXTENSION_BMP,
+	EXTENSION_GIF,
+	EXTENSION_ICO,
+	EXTENSION_JPEG,
+	EXTENSION_JPG,
+	EXTENSION_PNG,
+	EXTENSION_SVG,
+	EXTENSION_TIFF,
+	EXTENSION_WEBP,
+}
