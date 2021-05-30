@@ -6,21 +6,21 @@ Image MIME types
 
 const (
 	// .bmp: windows bitmap graphics
-	IMAGE_BMP = "image/bmp"
+	IMAGE_BMP MimeType = "image/bmp"
 	// .gif: graphics interchange
-	IMAGE_GIF = "image/gif"
+	IMAGE_GIF MimeType = "image/gif"
 	// .ico: icon
-	IMAGE_ICO = "image/vnd.microsoft.icon"
+	IMAGE_ICO MimeType = "image/vnd.microsoft.icon"
 	// .jpeg: jpeg images
-	IMAGE_JPEG = "image/jpeg"
+	IMAGE_JPEG MimeType = "image/jpeg"
 	// .png: portable network graphics
-	IMAGE_PNG = "image/png"
+	IMAGE_PNG MimeType = "image/png"
 	// .svg: scalable vector graphics
-	IMAGE_SVG = "image/svg+xml"
+	IMAGE_SVG MimeType = "image/svg+xml"
 	// .tiff: tagged image file
-	IMAGE_TIFF = "image/tiff"
+	IMAGE_TIFF MimeType = "image/tiff"
 	// .webp: webp image
-	IMAGE_WEBP = "image/webp"
+	IMAGE_WEBP MimeType = "image/webp"
 )
 
 // aliases/alternatives

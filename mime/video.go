@@ -6,21 +6,21 @@ Video MIME types
 
 const (
 	// .3g2: audio/video container
-	VIDEO_3G2 = "video/3gpp2"
+	VIDEO_3G2 MimeType = "video/3gpp2"
 	// .3gp: audio/video container
-	VIDEO_3GP = "video/3gpp"
+	VIDEO_3GP MimeType = "video/3gpp"
 	// .avi: audio video interleave
-	VIDEO_AVI = "video/x-msvideo"
+	VIDEO_AVI MimeType = "video/x-msvideo"
 	// .mp4: mp4 video
-	VIDEO_MP4 = "video/mp4"
+	VIDEO_MP4 MimeType = "video/mp4"
 	// .mpeg: mpeg video
-	VIDEO_MPEG = "video/mpeg"
+	VIDEO_MPEG MimeType = "video/mpeg"
 	// .ogv: ogg video
-	VIDEO_OGV = "video/ogg"
+	VIDEO_OGV MimeType = "video/ogg"
 	// .ts: mpeg transport stream
-	VIDEO_TS = "video/mp2t"
+	VIDEO_TS MimeType = "video/mp2t"
 	// .webm: webm video
-	VIDEO_WEBM = "video/webm"
+	VIDEO_WEBM MimeType = "video/webm"
 )
 
 // aliases/alternatives

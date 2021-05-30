@@ -6,25 +6,25 @@ Audio MIME types
 
 const (
 	// .3g2: audio/video container
-	AUDIO_3G2 = "audio/3gpp2"
+	AUDIO_3G2 MimeType = "audio/3gpp2"
 	// .3gp: audio/video container
-	AUDIO_3GP = "audio/3gpp"
+	AUDIO_3GP MimeType = "audio/3gpp"
 	// .aac: aac audio
-	AUDIO_AAC = "audio/aac"
+	AUDIO_AAC MimeType = "audio/aac"
 	// .midi: musical insrument digital interface
-	AUDIO_MIDI = "audio/midi"
+	AUDIO_MIDI MimeType = "audio/midi"
 	// .mp3: mp3 audio
-	AUDIO_MP3 = "audio/mpeg"
+	AUDIO_MP3 MimeType = "audio/mpeg"
 	// .oga: ogg audio
-	AUDIO_OGA = "audio/ogg"
+	AUDIO_OGA MimeType = "audio/ogg"
 	// .opus: opus audio
-	AUDIO_OPUS = "audio/opus"
+	AUDIO_OPUS MimeType = "audio/opus"
 	// .wav: waveform audio
-	AUDIO_WAV = "audio/wav"
+	AUDIO_WAV MimeType = "audio/wav"
 	// .weba: webm audio
-	AUDIO_WEBA = "audio/webm"
+	AUDIO_WEBA MimeType = "audio/webm"
 	// .midi: musical insrument digital interface
-	AUDIO_X_MIDI = "audio/x-midi"
+	AUDIO_X_MIDI MimeType = "audio/x-midi"
 )
 
 // aliases/alternatives

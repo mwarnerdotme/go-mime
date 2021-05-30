@@ -6,19 +6,19 @@ Text MIME types
 
 const (
 	// .css: cascading style sheet
-	TEXT_CSS = "text/css"
+	TEXT_CSS MimeType = "text/css"
 	// .csv: comma-separated values
-	TEXT_CSV = "text/csv"
+	TEXT_CSV MimeType = "text/csv"
 	// .html: hypertext markup language
-	TEXT_HTML = "text/html"
+	TEXT_HTML MimeType = "text/html"
 	// .ics: iCalendar
-	TEXT_ICS = "text/calendar"
+	TEXT_ICS MimeType = "text/calendar"
 	// .js: javascript
-	TEXT_JS = "text/javascript"
+	TEXT_JS MimeType = "text/javascript"
 	// .txt: plain text (ASCII, ISO 8859-n)
-	TEXT_PLAIN = "text/plain"
+	TEXT_PLAIN MimeType = "text/plain"
 	// .yaml: YAML ain't markup language
-	TEXT_YAML = "text/yaml"
+	TEXT_YAML MimeType = "text/yaml"
 )
 
 // aliases/alternatives

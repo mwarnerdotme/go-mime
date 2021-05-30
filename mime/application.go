@@ -6,81 +6,81 @@ Application MIME types
 
 const (
 	// .7z: 7-zip archive
-	APPLICATION_7Z = "application/x-7z-compressed"
+	APPLICATION_7Z MimeType = "application/x-7z-compressed"
 	// .abw: abiword document
-	APPLICATION_ABW = "application/x-abiword"
+	APPLICATION_ABW MimeType = "application/x-abiword"
 	// .arc: archive document
-	APPLICATION_ARC = "application/x-freearc"
+	APPLICATION_ARC MimeType = "application/x-freearc"
 	// .azw: amazon kindle ebook
-	APPLICATION_AZW = "application/vnd.amazon.ebook"
+	APPLICATION_AZW MimeType = "application/vnd.amazon.ebook"
 	// .bin: binary data
-	APPLICATION_BIN = "application/octet-stream"
+	APPLICATION_BIN MimeType = "application/octet-stream"
 	// .bz: bzip archive
-	APPLICATION_BZ = "application/x-bzip"
+	APPLICATION_BZ MimeType = "application/x-bzip"
 	// .bz2: bzip2 archive
-	APPLICATION_BZ2 = "application/x-bzip2"
+	APPLICATION_BZ2 MimeType = "application/x-bzip2"
 	// .cda: cd audio
-	APPLICATION_CDA = "application/x-cdf"
+	APPLICATION_CDA MimeType = "application/x-cdf"
 	// .csh: c-shell script
-	APPLICATION_CSH = "application/x-csh"
+	APPLICATION_CSH MimeType = "application/x-csh"
 	// .doc: microsoft word document
-	APPLICATION_DOC = "application/msword"
+	APPLICATION_DOC MimeType = "application/msword"
 	// .docx: microsoft word document (openxml)
-	APPLICATION_DOCX = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+	APPLICATION_DOCX MimeType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
 	// .eot: embedded opentype fonts
-	APPLICATION_EOT = "application/vnd.ms-fontobject"
+	APPLICATION_EOT MimeType = "application/vnd.ms-fontobject"
 	// .epub: electronic publication
-	APPLICATION_EPUB = "application/epub+zip"
+	APPLICATION_EPUB MimeType = "application/epub+zip"
 	// .gz: gzip compressed archive
-	APPLICATION_GZ = "application/gzip"
+	APPLICATION_GZ MimeType = "application/gzip"
 	// .jar: java archive
-	APPLICATION_JAR = "application/java-archive"
+	APPLICATION_JAR MimeType = "application/java-archive"
 	// .json: javascript object notation
-	APPLICATION_JSON = "application/json"
+	APPLICATION_JSON MimeType = "application/json"
 	// .jsonld: javascript object notation ld
-	APPLICATION_JSONLD = "application/ld+json"
+	APPLICATION_JSONLD MimeType = "application/ld+json"
 	// .mpkg: Apple installer package
-	APPLICATION_MPKG = "application/vnd.apple.installer+xml"
+	APPLICATION_MPKG MimeType = "application/vnd.apple.installer+xml"
 	// .odp: opendocument presentation
-	APPLICATION_ODP = "application/vnd.oasis.opendocument.presentation"
+	APPLICATION_ODP MimeType = "application/vnd.oasis.opendocument.presentation"
 	// .ods: opendocument spreadsheet
-	APPLICATION_ODS = "application/vnd.oasis.opendocument.spreadsheet"
+	APPLICATION_ODS MimeType = "application/vnd.oasis.opendocument.spreadsheet"
 	// .odt: opendocument text
-	APPLICATION_ODT = "application/vnd.oasis.opendocument.text"
+	APPLICATION_ODT MimeType = "application/vnd.oasis.opendocument.text"
 	// .ogx: ogg
-	APPLICATION_OGX = "application/ogg"
+	APPLICATION_OGX MimeType = "application/ogg"
 	// .pdf: adobe portable document
-	APPLICATION_PDF = "application/pdf"
+	APPLICATION_PDF MimeType = "application/pdf"
 	// .php: hypertext preprocessor - personal home page
-	APPLICATION_PHP = "application/x-httpd-php"
+	APPLICATION_PHP MimeType = "application/x-httpd-php"
 	// .ppt: microsoft powerpoint
-	APPLICATION_PPT = "application/vnd.ms-powerpoint"
+	APPLICATION_PPT MimeType = "application/vnd.ms-powerpoint"
 	// .ppt: microsoft powerpoint openxml
-	APPLICATION_PPTX = "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+	APPLICATION_PPTX MimeType = "application/vnd.openxmlformats-officedocument.presentationml.presentation"
 	// .rar: rar archive
-	APPLICATION_RAR = "application/vnd.rar"
+	APPLICATION_RAR MimeType = "application/vnd.rar"
 	// .rtf: rich text
-	APPLICATION_RTF = "application/rtf"
+	APPLICATION_RTF MimeType = "application/rtf"
 	// .sh: bourne shell script
-	APPLICATION_SH = "application/x-sh"
+	APPLICATION_SH MimeType = "application/x-sh"
 	// .swf: adobe flash
-	APPLICATION_SWF = "application/x-shockwave-flash"
+	APPLICATION_SWF MimeType = "application/x-shockwave-flash"
 	// .tar: tape archive
-	APPLICATION_TAR = "application/x-tar"
+	APPLICATION_TAR MimeType = "application/x-tar"
 	// .vsd: Microsoft Visio
-	APPLICATION_VSD = "application/vnd.visio"
+	APPLICATION_VSD MimeType = "application/vnd.visio"
 	// .xhtml: xhtml
-	APPLICATION_XHTML = "application/xhtml+xml"
+	APPLICATION_XHTML MimeType = "application/xhtml+xml"
 	// .xls: Microsoft Excel
-	APPLICATION_XLS = "applicatioon/vnd.ms-excel"
+	APPLICATION_XLS MimeType = "applicatioon/vnd.ms-excel"
 	// .xlsx: Microsoft Excel (openxml)
-	APPLICATION_XLSX = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+	APPLICATION_XLSX MimeType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 	// .xml: extensible markup
-	APPLICATION_XML = "application/xml"
+	APPLICATION_XML MimeType = "application/xml"
 	// .xul: XUL
-	APPLICATION_XUL = "application/vnd.mozilla.xul+xml"
+	APPLICATION_XUL MimeType = "application/vnd.mozilla.xul+xml"
 	// .zip: zip archive
-	APPLICATION_ZIP = "application/zip"
+	APPLICATION_ZIP MimeType = "application/zip"
 )
 
 // aliases/alternatives
@@ -102,9 +102,9 @@ Application content types (HTTP only MIME types) - no file extension
 
 const (
 	// extensible data notation
-	APPLICATION_EDN = "application/edn"
+	APPLICATION_EDN MimeType = "application/edn"
 	// form data encoded into url query parameter key/values
-	APPLICATION_FORM_URL_ENCODED = "application/x-www-form-urlencoded"
+	APPLICATION_FORM_URL_ENCODED MimeType = "application/x-www-form-urlencoded"
 )
 
 // slice containing all available application MIME types
