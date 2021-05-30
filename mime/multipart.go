@@ -1,15 +1,40 @@
 package mime
 
-const (
-	// http only
+/*
+Multipart MIME types
+*/
 
+const ()
+
+// Aliases/alternatives
+
+const ()
+
+/*
+Multipart content types (HTTP only MIME types) - no file extension
+*/
+
+const (
 	// multipart form data
-	MULTIPART_FORM = "multipart/form-data"
+	MULTIPART_FORM MIMEType = "multipart/form-data"
 )
 
-// slice containing all available multipart MIME types
-func GetMultipartMIMETypes() []string {
-	return []string{
-		MULTIPART_FORM,
-	}
+// Slice containing all available multipart MIME types.
+var MultipartMIMETypes = []MIMEType{
+	MULTIPART_FORM,
 }
+
+/*
+Multipart file extensions
+*/
+
+const ()
+
+// Slice containing all available multipart file extensions.
+var MultipartFileExtensions = []FileExtension{}
+
+/*
+Map of file extensions to MIME types
+*/
+
+var MultipartMIMETypeMap = MIMETypeMap{}

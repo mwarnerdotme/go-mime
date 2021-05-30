@@ -6,105 +6,85 @@ import (
 	"gitlab.com/mwarnerdotme/go-mime/mime"
 )
 
-func TestUnitLookupByFileExtensionApplication(t *testing.T) {
-	result, err := mime.LookupByFileExtension(".json", mime.ROOT_TYPE_APPLICATION)
+/*
+Lookup by file extension
+*/
 
-	if err != nil {
-		t.Fatal(err)
-	}
+func TestUnitLookupByFileExtension(t *testing.T) {
+	for _, rootType := range mime.RootTypes {
+		var fe []mime.FileExtension
+		switch rootType {
+		case mime.ROOT_TYPE_APPLICATION:
+			fe = mime.ApplicationFileExtensions
+		case mime.ROOT_TYPE_AUDIO:
+			fe = mime.AudioFileExtensions
+		case mime.ROOT_TYPE_FONT:
+			fe = mime.FontFileExtensions
+		case mime.ROOT_TYPE_IMAGE:
+			fe = mime.ImageFileExtensions
+		case mime.ROOT_TYPE_MULTIPART:
+			fe = mime.MultipartFileExtensions
+		case mime.ROOT_TYPE_TEXT:
+			fe = mime.TextFileExtensions
+		case mime.ROOT_TYPE_VIDEO:
+			fe = mime.VideoFileExtensions
+		}
 
-	expectedResult := "application/json"
-	if result != expectedResult {
-		t.Fatalf("an incorrect MIME type was returned: expected '%s' and received '%s'", expectedResult, result)
-	}
-}
+		for _, extension := range fe {
+			result, err := mime.LookupByFileExtension(extension, rootType)
 
-func TestUnitLookupByFileExtensionAudio(t *testing.T) {
-	result, err := mime.LookupByFileExtension(".mp3", mime.ROOT_TYPE_AUDIO)
+			if err != nil {
+				t.Fatal(err)
+			}
 
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	expectedResult := "audio/mpeg"
-	if result != expectedResult {
-		t.Fatalf("an incorrect MIME type was returned: expected '%s' and received '%s'", expectedResult, result)
-	}
-}
-
-func TestUnitLookupByFileExtensionFont(t *testing.T) {
-	result, err := mime.LookupByFileExtension(".ttf", mime.ROOT_TYPE_FONT)
-
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	expectedResult := "font/ttf"
-	if result != expectedResult {
-		t.Fatalf("an incorrect MIME type was returned: expected '%s' and received '%s'", expectedResult, result)
-	}
-}
-
-func TestUnitLookupByFileExtensionImage(t *testing.T) {
-	result, err := mime.LookupByFileExtension(".jpeg", mime.ROOT_TYPE_IMAGE)
-
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	expectedResult := "image/jpeg"
-	if result != expectedResult {
-		t.Fatalf("an incorrect MIME type was returned: expected '%s' and received '%s'", expectedResult, result)
-	}
-}
-
-func TestUnitLookupByFileExtensionText(t *testing.T) {
-	result, err := mime.LookupByFileExtension(".csv", mime.ROOT_TYPE_TEXT)
-
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	expectedResult := "text/csv"
-	if result != expectedResult {
-		t.Fatalf("an incorrect MIME type was returned: expected '%s' and received '%s'", expectedResult, result)
-	}
-}
-
-func TestUnitLookupByFileExtensionVideo(t *testing.T) {
-	result, err := mime.LookupByFileExtension(".mp4", mime.ROOT_TYPE_VIDEO)
-
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	expectedResult := "video/mp4"
-	if result != expectedResult {
-		t.Fatalf("an incorrect MIME type was returned: expected '%s' and received '%s'", expectedResult, result)
-	}
-}
-
-func TestUnitLookupByFileExtensionInvalidExtension(t *testing.T) {
-	_, err := mime.LookupByFileExtension(".test", mime.ROOT_TYPE_TEXT)
-
-	if err == nil {
-		t.Fatal("test did not recognize the invalid file extension")
+			if result == "" {
+				t.Fatalf("no MIME type was returned for extension '%s'", extension)
+			}
+		}
 	}
 }
 
 func TestUnitLookupByFileExtensionInvalidRootType(t *testing.T) {
-	_, err := mime.LookupByFileExtension(".csv", "test")
+	invalidRootType := mime.RootType("test")
+	_, err := mime.LookupByFileExtension(mime.EXTENSION_3G2, invalidRootType)
 
 	if err == nil {
-		t.Fatal("test did not recognize the invalid root MIME type")
+		t.Fatal("test did not recognize invalid root type")
 	}
 }
 
-func TestUnitRootTypeString(t *testing.T) {
-	testRootType := mime.ROOT_TYPE_APPLICATION
-	testRootTypeString := "application"
+func TestUnitLookupByFileExtensionInvalidFileExtension(t *testing.T) {
+	invalidFileExtension := mime.FileExtension("test")
+	_, err := mime.LookupByFileExtension(invalidFileExtension, mime.ROOT_TYPE_APPLICATION)
 
-	if testRootType.String() != testRootTypeString {
-		t.Fatal("could not successfully return the root type as a string")
+	if err == nil {
+		t.Fatal("test did not recognize invalid file extension")
+	}
+}
+
+/*
+Lookup by file extension - simple
+*/
+
+func TestUnitLookupByFileExtensionSimple(t *testing.T) {
+	for _, extension := range mime.FileExtensions {
+		result, err := mime.LookupByFileExtensionSimple(extension)
+
+		if err != nil {
+			t.Fatal(err)
+		}
+
+		if result == "" {
+			t.Fatalf("no MIME type was returned for extension '%s'", extension)
+		}
+	}
+}
+
+func TestUnitLookupByFileExtensionSimpleInvalidFileExtension(t *testing.T) {
+	invalidFileExtension := mime.FileExtension("test")
+	_, err := mime.LookupByFileExtensionSimple(invalidFileExtension)
+
+	if err == nil {
+		t.Fatal("test did not recognize invalid file extension")
 	}
 }
