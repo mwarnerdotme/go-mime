@@ -42,7 +42,7 @@ func LookupByFileExtension(extension FileExtension, rootType RootType) (string, 
 	}
 
 	// use std 'mime' package as a backup
-	backupMIMEType := stdMIME.TypeByExtension(fmt.Sprintf(".%s", extension))
+	backupMIMEType := stdMIME.TypeByExtension(extension.String())
 
 	if backupMIMEType != "" {
 		return backupMIMEType, nil
@@ -66,7 +66,7 @@ func LookupByFileExtensionSimple(extension FileExtension) (string, error) {
 	}
 
 	// use std 'mime' package as a backup
-	backupMIMEType := stdMIME.TypeByExtension(fmt.Sprintf(".%s", extension))
+	backupMIMEType := stdMIME.TypeByExtension(extension.String())
 
 	if backupMIMEType != "" {
 		return backupMIMEType, nil
