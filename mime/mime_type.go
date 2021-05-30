@@ -51,3 +51,29 @@ var MIMETypes = func() []MIMEType {
 func (mt *MIMEType) String() string {
 	return string(*mt)
 }
+
+// Map of file extensions to their corresponding MIME types
+type MIMETypeMap = map[FileExtension]MIMEType
+
+// Map of all file extensions to their MIME types.
+var Map = func() MIMETypeMap {
+	var mtm = MIMETypeMap{}
+
+	maps := []MIMETypeMap{
+		ApplicationMIMETypeMap,
+		AudioMIMETypeMap,
+		FontMIMETypeMap,
+		ImageMIMETypeMap,
+		MultipartMIMETypeMap,
+		TextMIMETypeMap,
+		VideoMIMETypeMap,
+	}
+
+	for i := range maps {
+		for k, v := range maps[i] {
+			mtm[k] = v
+		}
+	}
+
+	return mtm
+}()

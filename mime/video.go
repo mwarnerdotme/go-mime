@@ -56,7 +56,8 @@ const (
 	// EXTENSION_3GP  FileExtension = ".3gp" // already exists in audio
 	EXTENSION_AVI  FileExtension = ".avi"
 	EXTENSION_MP4  FileExtension = ".mp4"
-	EXTENSION_MPG  FileExtension = ".mpeg"
+	EXTENSION_MPEG FileExtension = ".mpeg"
+	EXTENSION_MPG  FileExtension = ".mpg"
 	EXTENSION_OGV  FileExtension = ".ogv"
 	EXTENSION_TS   FileExtension = ".ts"
 	EXTENSION_WEBM FileExtension = ".webm"
@@ -68,8 +69,25 @@ var VideoFileExtensions = []FileExtension{
 	EXTENSION_3GP,
 	EXTENSION_AVI,
 	EXTENSION_MP4,
+	EXTENSION_MPEG,
 	EXTENSION_MPG,
 	EXTENSION_OGV,
 	EXTENSION_TS,
 	EXTENSION_WEBM,
+}
+
+/*
+Map of file extensions to MIME types
+*/
+
+var VideoMIMETypeMap = MIMETypeMap{
+	EXTENSION_3G2:  VIDEO_3G2,
+	EXTENSION_3GP:  VIDEO_3GP,
+	EXTENSION_AVI:  VIDEO_AVI,
+	EXTENSION_MP4:  VIDEO_MP4,
+	EXTENSION_MPEG: VIDEO_MPEG,
+	EXTENSION_MPG:  VIDEO_MPEG,
+	EXTENSION_OGV:  VIDEO_OGV,
+	EXTENSION_TS:   VIDEO_TS,
+	EXTENSION_WEBM: VIDEO_WEBM,
 }

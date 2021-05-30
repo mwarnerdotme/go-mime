@@ -51,3 +51,14 @@ var FontFileExtensions = []FileExtension{
 	EXTENSION_WOFF,
 	EXTENSION_WOFF2,
 }
+
+/*
+Map of file extensions to MIME types
+*/
+
+var FontMIMETypeMap = MIMETypeMap{
+	EXTENSION_OTF:   FONT_OTF,
+	EXTENSION_TTF:   FONT_TTF,
+	EXTENSION_WOFF:  FONT_WOFF,
+	EXTENSION_WOFF2: FONT_WOFF2,
+}

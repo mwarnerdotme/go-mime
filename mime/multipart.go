@@ -32,3 +32,9 @@ const ()
 
 // Slice containing all available multipart file extensions.
 var MultipartFileExtensions = []FileExtension{}
+
+/*
+Map of file extensions to MIME types
+*/
+
+var MultipartMIMETypeMap = MIMETypeMap{}

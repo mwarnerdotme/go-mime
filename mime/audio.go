@@ -64,6 +64,7 @@ const (
 	EXTENSION_3GP  FileExtension = ".3gp"
 	EXTENSION_AAC  FileExtension = ".aac"
 	EXTENSION_MIDI FileExtension = ".midi"
+	EXTENSION_MID  FileExtension = ".mid"
 	EXTENSION_MP3  FileExtension = ".mp3"
 	EXTENSION_OGA  FileExtension = ".oga"
 	EXTENSION_OPUS FileExtension = ".opus"
@@ -77,9 +78,27 @@ var AudioFileExtensions = []FileExtension{
 	EXTENSION_3GP,
 	EXTENSION_AAC,
 	EXTENSION_MIDI,
+	EXTENSION_MID,
 	EXTENSION_MP3,
 	EXTENSION_OGA,
 	EXTENSION_OPUS,
 	EXTENSION_WAV,
 	EXTENSION_WEBA,
+}
+
+/*
+Map of file extensions to MIME types
+*/
+
+var AudioMIMETypeMap = MIMETypeMap{
+	EXTENSION_3G2:  AUDIO_3G2,
+	EXTENSION_3GP:  AUDIO_3GP,
+	EXTENSION_AAC:  AUDIO_AAC,
+	EXTENSION_MIDI: AUDIO_MIDI,
+	EXTENSION_MID:  AUDIO_MID,
+	EXTENSION_MP3:  AUDIO_MP3,
+	EXTENSION_OGA:  AUDIO_OGA,
+	EXTENSION_OPUS: AUDIO_OPUS,
+	EXTENSION_WAV:  AUDIO_WAV,
+	EXTENSION_WEBA: AUDIO_WEBA,
 }
