@@ -1,5 +1,9 @@
 package mime
 
+/*
+Application MIME types
+*/
+
 const (
 	// .7z: 7-zip archive
 	APPLICATION_7Z = "application/x-7z-compressed"
@@ -77,16 +81,11 @@ const (
 	APPLICATION_XUL = "application/vnd.mozilla.xul+xml"
 	// .zip: zip archive
 	APPLICATION_ZIP = "application/zip"
+)
 
-	// http only
+// aliases/alternatives
 
-	// extensible data notation
-	APPLICATION_EDN = "application/edn"
-	// form data encoded into url query parameter key/values
-	APPLICATION_FORM_URL_ENCODED = "application/x-www-form-urlencoded"
-
-	// aliases/alternatives
-
+const (
 	APPLICATION_EXCEL        = APPLICATION_XLS
 	APPLICATION_EXCEL_X      = APPLICATION_XLSX
 	APPLICATION_OGG          = APPLICATION_OGX
@@ -97,52 +96,147 @@ const (
 	APPLICATION_WORD_X       = APPLICATION_DOCX
 )
 
+/*
+Application content types (HTTP only MIME types) - no file extension
+*/
+
+const (
+	// extensible data notation
+	APPLICATION_EDN = "application/edn"
+	// form data encoded into url query parameter key/values
+	APPLICATION_FORM_URL_ENCODED = "application/x-www-form-urlencoded"
+)
+
 // slice containing all available application MIME types
-func GetApplicationMIMETypes() []string {
-	return []string{
-		APPLICATION_7Z,
-		APPLICATION_ABW,
-		APPLICATION_ARC,
-		APPLICATION_AZW,
-		APPLICATION_BIN,
-		APPLICATION_BZ,
-		APPLICATION_BZ2,
-		APPLICATION_CDA,
-		APPLICATION_CSH,
-		APPLICATION_DOC,
-		APPLICATION_DOCX,
-		APPLICATION_EDN,
-		APPLICATION_EOT,
-		APPLICATION_EPUB,
-		APPLICATION_EXCEL,
-		APPLICATION_EXCEL_X,
-		APPLICATION_FORM_URL_ENCODED,
-		APPLICATION_GZ,
-		APPLICATION_JAR,
-		APPLICATION_JSON,
-		APPLICATION_JSONLD,
-		APPLICATION_MPKG,
-		APPLICATION_ODP,
-		APPLICATION_ODS,
-		APPLICATION_ODT,
-		APPLICATION_OGX,
-		APPLICATION_PDF,
-		APPLICATION_PHP,
-		APPLICATION_PPT,
-		APPLICATION_PPTX,
-		APPLICATION_RAR,
-		APPLICATION_RTF,
-		APPLICATION_SH,
-		APPLICATION_SWF,
-		APPLICATION_TAR,
-		APPLICATION_VSD,
-		APPLICATION_WORD,
-		APPLICATION_WORD_X,
-		APPLICATION_XHTML,
-		APPLICATION_XLS,
-		APPLICATION_XLSX,
-		APPLICATION_XML,
-		APPLICATION_XUL,
-		APPLICATION_ZIP,
-	}
+var ApplicationMIMETypes = []string{
+	APPLICATION_7Z,
+	APPLICATION_ABW,
+	APPLICATION_ARC,
+	APPLICATION_AZW,
+	APPLICATION_BIN,
+	APPLICATION_BZ,
+	APPLICATION_BZ2,
+	APPLICATION_CDA,
+	APPLICATION_CSH,
+	APPLICATION_DOC,
+	APPLICATION_DOCX,
+	APPLICATION_EDN,
+	APPLICATION_EOT,
+	APPLICATION_EPUB,
+	APPLICATION_EXCEL,
+	APPLICATION_EXCEL_X,
+	APPLICATION_FORM_URL_ENCODED,
+	APPLICATION_GZ,
+	APPLICATION_JAR,
+	APPLICATION_JSON,
+	APPLICATION_JSONLD,
+	APPLICATION_MPKG,
+	APPLICATION_ODP,
+	APPLICATION_ODS,
+	APPLICATION_ODT,
+	APPLICATION_OGX,
+	APPLICATION_PDF,
+	APPLICATION_PHP,
+	APPLICATION_PPT,
+	APPLICATION_PPTX,
+	APPLICATION_RAR,
+	APPLICATION_RTF,
+	APPLICATION_SH,
+	APPLICATION_SWF,
+	APPLICATION_TAR,
+	APPLICATION_VSD,
+	APPLICATION_WORD,
+	APPLICATION_WORD_X,
+	APPLICATION_XHTML,
+	APPLICATION_XLS,
+	APPLICATION_XLSX,
+	APPLICATION_XML,
+	APPLICATION_XUL,
+	APPLICATION_ZIP,
+}
+
+/*
+Application file extensions
+*/
+
+const (
+	EXTENSION_7Z     FileExtension = ".7z"
+	EXTENSION_ABW    FileExtension = ".abw"
+	EXTENSION_ARC    FileExtension = ".arc"
+	EXTENSION_AZW    FileExtension = ".azw"
+	EXTENSION_BIN    FileExtension = ".bin"
+	EXTENSION_BZ     FileExtension = ".bz"
+	EXTENSION_BZ2    FileExtension = ".bz2"
+	EXTENSION_CDA    FileExtension = ".cda"
+	EXTENSION_CSH    FileExtension = ".csh"
+	EXTENSION_DOC    FileExtension = ".doc"
+	EXTENSION_DOCX   FileExtension = ".docx"
+	EXTENSION_EOT    FileExtension = ".eot"
+	EXTENSION_EPUB   FileExtension = ".epub"
+	EXTENSION_GZ     FileExtension = ".gz"
+	EXTENSION_JAR    FileExtension = ".jar"
+	EXTENSION_JSON   FileExtension = ".json"
+	EXTENSION_JSONLD FileExtension = ".jsonld"
+	EXTENSION_MPKG   FileExtension = ".mpkg"
+	EXTENSION_ODP    FileExtension = ".odp"
+	EXTENSION_ODS    FileExtension = ".ods"
+	EXTENSION_ODT    FileExtension = ".odt"
+	EXTENSION_OGX    FileExtension = ".ogx"
+	EXTENSION_PDF    FileExtension = ".pdf"
+	EXTENSION_PHP    FileExtension = ".php"
+	EXTENSION_PPT    FileExtension = ".ppt"
+	EXTENSION_PPTX   FileExtension = ".pptx"
+	EXTENSION_RAR    FileExtension = ".rar"
+	EXTENSION_RTF    FileExtension = ".rtf"
+	EXTENSION_SH     FileExtension = ".sh"
+	EXTENSION_SWF    FileExtension = ".swf"
+	EXTENSION_TAR    FileExtension = ".tar"
+	EXTENSION_VSD    FileExtension = ".vsd"
+	EXTENSION_XHTML  FileExtension = ".xhtml"
+	EXTENSION_XLS    FileExtension = ".xls"
+	EXTENSION_XLSX   FileExtension = ".xlsx"
+	EXTENSION_XML    FileExtension = ".xml"
+	EXTENSION_XUL    FileExtension = ".xul"
+	EXTENSION_ZIP    FileExtension = ".zip"
+)
+
+// slice containing all available application file extensions
+var ApplicationFileExtensions = []FileExtension{
+	EXTENSION_7Z,
+	EXTENSION_ABW,
+	EXTENSION_ARC,
+	EXTENSION_BIN,
+	EXTENSION_BZ,
+	EXTENSION_BZ2,
+	EXTENSION_CDA,
+	EXTENSION_CSH,
+	EXTENSION_DOC,
+	EXTENSION_DOCX,
+	EXTENSION_EOT,
+	EXTENSION_EPUB,
+	EXTENSION_GZ,
+	EXTENSION_JAR,
+	EXTENSION_JSON,
+	EXTENSION_JSONLD,
+	EXTENSION_MPKG,
+	EXTENSION_ODP,
+	EXTENSION_ODS,
+	EXTENSION_ODT,
+	EXTENSION_OGX,
+	EXTENSION_PDF,
+	EXTENSION_PHP,
+	EXTENSION_PPT,
+	EXTENSION_PPTX,
+	EXTENSION_RAR,
+	EXTENSION_RTF,
+	EXTENSION_SH,
+	EXTENSION_SWF,
+	EXTENSION_TAR,
+	EXTENSION_VSD,
+	EXTENSION_XHTML,
+	EXTENSION_XLS,
+	EXTENSION_XLSX,
+	EXTENSION_XML,
+	EXTENSION_XUL,
+	EXTENSION_ZIP,
 }
