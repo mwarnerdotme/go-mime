@@ -83,7 +83,7 @@ const (
 	APPLICATION_ZIP MIMEType = "application/zip"
 )
 
-// aliases/alternatives
+// Aliases/alternatives
 
 const (
 	APPLICATION_EXCEL        = APPLICATION_XLS
@@ -107,7 +107,7 @@ const (
 	APPLICATION_FORM_URL_ENCODED MIMEType = "application/x-www-form-urlencoded"
 )
 
-// slice containing all available application MIME types
+// Slice containing all available application MIME types.
 var ApplicationMIMETypes = []MIMEType{
 	APPLICATION_7Z,
 	APPLICATION_ABW,
@@ -200,7 +200,7 @@ const (
 	EXTENSION_ZIP    FileExtension = ".zip"
 )
 
-// slice containing all available application file extensions
+// Slice containing all available application file extensions.
 var ApplicationFileExtensions = []FileExtension{
 	EXTENSION_7Z,
 	EXTENSION_ABW,

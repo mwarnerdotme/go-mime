@@ -13,7 +13,7 @@ const (
 	ROOT_TYPE_VIDEO       RootType = "video"
 )
 
-// Slice containing all available root MIME types
+// Slice containing all available root MIME types.
 var RootTypes = []RootType{
 	ROOT_TYPE_APPLICATION,
 	ROOT_TYPE_AUDIO,
@@ -24,7 +24,7 @@ var RootTypes = []RootType{
 	ROOT_TYPE_VIDEO,
 }
 
-// Returns the root type as a string.
+// Returns the RootType as a string.
 func (rt *RootType) String() string {
 	return string(*rt)
 }
@@ -32,7 +32,7 @@ func (rt *RootType) String() string {
 // A MIME type (content type in HTTP).
 type MIMEType string
 
-// Slice containing all available MIME types
+// Slice containing all available MIME types.
 var MIMETypes = func() []MIMEType {
 	var mt []MIMEType
 
@@ -47,7 +47,7 @@ var MIMETypes = func() []MIMEType {
 	return mt
 }()
 
-// Returns the mime type as a string.
+// Returns the MIMEType as a string.
 func (mt *MIMEType) String() string {
 	return string(*mt)
 }

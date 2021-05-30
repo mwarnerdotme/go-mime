@@ -15,7 +15,7 @@ const (
 	FONT_WOFF2 MIMEType = "font/woff2"
 )
 
-// aliases/alternatives
+// Aliases/alternatives
 
 const ()
 
@@ -25,7 +25,7 @@ Font content types (HTTP only MIME types) - no file extension
 
 const ()
 
-// slice containing all available font MIME types
+// Slice containing all available font MIME types.
 var FontMIMETypes = []MIMEType{
 	FONT_OTF,
 	FONT_TTF,
@@ -44,7 +44,7 @@ const (
 	EXTENSION_WOFF2 FileExtension = ".woff2"
 )
 
-// slice containing all available font file extensions
+// Slice containing all available font file extensions.
 var FontFileExtensions = []FileExtension{
 	EXTENSION_OTF,
 	EXTENSION_TTF,

@@ -23,7 +23,7 @@ const (
 	IMAGE_WEBP MIMEType = "image/webp"
 )
 
-// aliases/alternatives
+// Aliases/alternatives
 
 const (
 	IMAGE_TIF = IMAGE_TIFF
@@ -36,7 +36,7 @@ Image content types (HTTP only MIME types) - no file extension
 
 const ()
 
-// slice containing all available image MIME types
+// Slice containing all available image MIME types.
 var ImageMIMETypes = []MIMEType{
 	IMAGE_BMP,
 	IMAGE_GIF,
@@ -64,7 +64,7 @@ const (
 	EXTENSION_WEBP FileExtension = ".webp"
 )
 
-// slice containing all available image file extensions
+// Slice containing all available image file extensions.
 var ImageFileExtensions = []FileExtension{
 	EXTENSION_BMP,
 	EXTENSION_GIF,

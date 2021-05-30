@@ -23,7 +23,7 @@ const (
 	VIDEO_WEBM MIMEType = "video/webm"
 )
 
-// aliases/alternatives
+// Aliases/alternatives
 
 const (
 	VIDEO_OGG = VIDEO_OGV
@@ -35,7 +35,7 @@ Video content types (HTTP only MIME types) - no file extension
 
 const ()
 
-// slice containing all available video MIME types
+// Slice containing all available video MIME types.
 var VideoMIMETypes = []MIMEType{
 	VIDEO_3G2,
 	VIDEO_3GP,
@@ -62,7 +62,7 @@ const (
 	EXTENSION_WEBM FileExtension = ".webm"
 )
 
-// slice containing all available video file extensions
+// Slice containing all available video file extensions.
 var VideoFileExtensions = []FileExtension{
 	EXTENSION_3G2,
 	EXTENSION_3GP,

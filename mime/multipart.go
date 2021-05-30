@@ -6,7 +6,7 @@ Multipart MIME types
 
 const ()
 
-// aliases/alternatives
+// Aliases/alternatives
 
 const ()
 
@@ -19,14 +19,16 @@ const (
 	MULTIPART_FORM MIMEType = "multipart/form-data"
 )
 
-// slice containing all available multipart MIME types
+// Slice containing all available multipart MIME types.
 var MultipartMIMETypes = []MIMEType{
 	MULTIPART_FORM,
 }
 
-/* Multipart file extensions */
+/*
+Multipart file extensions
+*/
 
 const ()
 
-// slice containing all available multipart file extensions
+// Slice containing all available multipart file extensions.
 var MultipartFileExtensions = []FileExtension{}

@@ -21,7 +21,7 @@ const (
 	TEXT_YAML MIMEType = "text/yaml"
 )
 
-// aliases/alternatives
+// Aliases/alternatives
 
 const (
 	TEXT_HTM = TEXT_HTML
@@ -34,7 +34,7 @@ Text content types (HTTP only MIME types) - no file extension
 
 const ()
 
-// slice containing all available text MIME types
+// Slice containing all available text MIME types.
 var TextMIMETypes = []MIMEType{
 	TEXT_CSS,
 	TEXT_CSV,
@@ -61,7 +61,7 @@ const (
 	EXTENSION_YML  = ".yml"
 )
 
-// slice containing all available text file extensions
+// Slice containing all available text file extensions.
 var TextFileExtensions = []FileExtension{
 	EXTENSION_CSS,
 	EXTENSION_CSV,

@@ -27,7 +27,7 @@ const (
 	AUDIO_X_MIDI MIMEType = "audio/x-midi"
 )
 
-// aliases/alternatives
+// Aliases/alternatives
 
 const (
 	AUDIO_MID   = AUDIO_MIDI
@@ -41,7 +41,7 @@ Audio content types (HTTP only MIME types) - no file extension
 
 const ()
 
-// slice containing all available audio MIME types
+// Slice containing all available audio MIME types.
 var AudioMIMETypes = []MIMEType{
 	AUDIO_3G2,
 	AUDIO_3GP,
@@ -71,7 +71,7 @@ const (
 	EXTENSION_WEBA FileExtension = ".weba"
 )
 
-// slice containing all available audio file extensions
+// Slice containing all available audio file extensions.
 var AudioFileExtensions = []FileExtension{
 	EXTENSION_3G2,
 	EXTENSION_3GP,
