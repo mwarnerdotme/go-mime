@@ -37,7 +37,7 @@ Image content types (HTTP only MIME types) - no file extension
 const ()
 
 // slice containing all available image MIME types
-var ImageMIMETypes = []string{
+var ImageMIMETypes = []MimeType{
 	IMAGE_BMP,
 	IMAGE_GIF,
 	IMAGE_ICO,

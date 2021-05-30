@@ -35,7 +35,7 @@ Text content types (HTTP only MIME types) - no file extension
 const ()
 
 // slice containing all available text MIME types
-var TextMIMETypes = []string{
+var TextMIMETypes = []MimeType{
 	TEXT_CSS,
 	TEXT_CSV,
 	TEXT_HTML,

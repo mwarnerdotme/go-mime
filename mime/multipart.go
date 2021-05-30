@@ -20,7 +20,7 @@ const (
 )
 
 // slice containing all available multipart MIME types
-var MultipartMIMETypes = []string{
+var MultipartMIMETypes = []MimeType{
 	MULTIPART_FORM,
 }
 

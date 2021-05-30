@@ -42,7 +42,7 @@ Audio content types (HTTP only MIME types) - no file extension
 const ()
 
 // slice containing all available audio MIME types
-var AudioMIMETypes = []string{
+var AudioMIMETypes = []MimeType{
 	AUDIO_3G2,
 	AUDIO_3GP,
 	AUDIO_AAC,

@@ -26,7 +26,7 @@ Font content types (HTTP only MIME types) - no file extension
 const ()
 
 // slice containing all available font MIME types
-var FontMIMETypes = []string{
+var FontMIMETypes = []MimeType{
 	FONT_OTF,
 	FONT_TTF,
 	FONT_WOFF,

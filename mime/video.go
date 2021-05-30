@@ -36,7 +36,7 @@ Video content types (HTTP only MIME types) - no file extension
 const ()
 
 // slice containing all available video MIME types
-var VideoMIMETypes = []string{
+var VideoMIMETypes = []MimeType{
 	VIDEO_3G2,
 	VIDEO_3GP,
 	VIDEO_AVI,

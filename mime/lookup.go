@@ -29,7 +29,7 @@ File types can be found in the same package (mime.CORE_TYPE_*). They correspond 
 */
 func LookupByFileExtension(extension string, rootType RootType) (mime string, err error) {
 	// get appropriate slice of MIME types
-	var mimeTypeSlice []string
+	var mimeTypeSlice []MimeType
 	switch rootType {
 	case ROOT_TYPE_APPLICATION:
 		mimeTypeSlice = ApplicationMIMETypes
@@ -55,8 +55,8 @@ func LookupByFileExtension(extension string, rootType RootType) (mime string, er
 
 	// get the best matching MIME type
 	for i := range mimeTypeSlice {
-		if strings.Contains(mimeTypeSlice[i], extension) {
-			return mimeTypeSlice[i], nil
+		if strings.Contains(mimeTypeSlice[i].String(), extension) {
+			return mimeTypeSlice[i].String(), nil
 		}
 	}
 

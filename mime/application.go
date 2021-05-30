@@ -108,7 +108,7 @@ const (
 )
 
 // slice containing all available application MIME types
-var ApplicationMIMETypes = []string{
+var ApplicationMIMETypes = []MimeType{
 	APPLICATION_7Z,
 	APPLICATION_ABW,
 	APPLICATION_ARC,
