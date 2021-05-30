@@ -99,12 +99,3 @@ func TestUnitLookupByFileExtensionInvalidRootType(t *testing.T) {
 		t.Fatal("test did not recognize the invalid root MIME type")
 	}
 }
-
-func TestUnitRootTypeString(t *testing.T) {
-	testRootType := mime.ROOT_TYPE_APPLICATION
-	testRootTypeString := "application"
-
-	if testRootType.String() != testRootTypeString {
-		t.Fatal("could not successfully return the root type as a string")
-	}
-}

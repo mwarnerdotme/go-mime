@@ -8,20 +8,6 @@ import (
 	stdMime "mime"
 )
 
-// Root of any given MIME type (ie: {RootType}/*).
-type RootType string
-
-// Used to scope MIME type lookups.
-const (
-	ROOT_TYPE_APPLICATION RootType = "application"
-	ROOT_TYPE_AUDIO       RootType = "audio"
-	ROOT_TYPE_FONT        RootType = "font"
-	ROOT_TYPE_IMAGE       RootType = "image"
-	ROOT_TYPE_MULTIPART   RootType = "multipart"
-	ROOT_TYPE_TEXT        RootType = "text"
-	ROOT_TYPE_VIDEO       RootType = "video"
-)
-
 /*
 Finds the best MIME type based on the provided extension and file type.
 
@@ -70,8 +56,4 @@ func LookupByFileExtension(extension string, rootType RootType) (mime string, er
 	// return
 	notSupportedErrorMessage := fmt.Sprintf("provided extension is not supported - no associated MIME type for extension '%s'", extension)
 	return "", errors.New(notSupportedErrorMessage)
-}
-
-func (rt *RootType) String() string {
-	return string(*rt)
 }
