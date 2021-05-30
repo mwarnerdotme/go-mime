@@ -10,7 +10,7 @@ import (
 Lookup by file extension
 */
 func TestUnitLookupByFileExtensionApplication(t *testing.T) {
-	result, err := mime.LookupByFileExtension(".json", mime.ROOT_TYPE_APPLICATION)
+	result, err := mime.LookupByFileExtension(mime.EXTENSION_JSON, mime.ROOT_TYPE_APPLICATION)
 
 	if err != nil {
 		t.Fatal(err)
@@ -23,20 +23,20 @@ func TestUnitLookupByFileExtensionApplication(t *testing.T) {
 }
 
 func TestUnitLookupByFileExtensionAudio(t *testing.T) {
-	result, err := mime.LookupByFileExtension(".mp3", mime.ROOT_TYPE_AUDIO)
+	result, err := mime.LookupByFileExtension(mime.EXTENSION_AAC, mime.ROOT_TYPE_AUDIO)
 
 	if err != nil {
 		t.Fatal(err)
 	}
 
-	expectedResult := "audio/mpeg"
+	expectedResult := "audio/aac"
 	if result != expectedResult {
 		t.Fatalf("an incorrect MIME type was returned: expected '%s' and received '%s'", expectedResult, result)
 	}
 }
 
 func TestUnitLookupByFileExtensionFont(t *testing.T) {
-	result, err := mime.LookupByFileExtension(".ttf", mime.ROOT_TYPE_FONT)
+	result, err := mime.LookupByFileExtension(mime.EXTENSION_TTF, mime.ROOT_TYPE_FONT)
 
 	if err != nil {
 		t.Fatal(err)
@@ -49,7 +49,7 @@ func TestUnitLookupByFileExtensionFont(t *testing.T) {
 }
 
 func TestUnitLookupByFileExtensionImage(t *testing.T) {
-	result, err := mime.LookupByFileExtension(".jpeg", mime.ROOT_TYPE_IMAGE)
+	result, err := mime.LookupByFileExtension(mime.EXTENSION_JPEG, mime.ROOT_TYPE_IMAGE)
 
 	if err != nil {
 		t.Fatal(err)
@@ -62,7 +62,7 @@ func TestUnitLookupByFileExtensionImage(t *testing.T) {
 }
 
 func TestUnitLookupByFileExtensionText(t *testing.T) {
-	result, err := mime.LookupByFileExtension(".csv", mime.ROOT_TYPE_TEXT)
+	result, err := mime.LookupByFileExtension(mime.EXTENSION_CSV, mime.ROOT_TYPE_TEXT)
 
 	if err != nil {
 		t.Fatal(err)
@@ -75,7 +75,7 @@ func TestUnitLookupByFileExtensionText(t *testing.T) {
 }
 
 func TestUnitLookupByFileExtensionVideo(t *testing.T) {
-	result, err := mime.LookupByFileExtension(".mp4", mime.ROOT_TYPE_VIDEO)
+	result, err := mime.LookupByFileExtension(mime.EXTENSION_MP4, mime.ROOT_TYPE_VIDEO)
 
 	if err != nil {
 		t.Fatal(err)
@@ -88,7 +88,7 @@ func TestUnitLookupByFileExtensionVideo(t *testing.T) {
 }
 
 func TestUnitLookupByFileExtensionInvalidExtension(t *testing.T) {
-	_, err := mime.LookupByFileExtension(".test", mime.ROOT_TYPE_TEXT)
+	_, err := mime.LookupByFileExtension(mime.FileExtension(".test"), mime.ROOT_TYPE_TEXT)
 
 	if err == nil {
 		t.Fatal("test did not recognize the invalid file extension")
@@ -96,7 +96,7 @@ func TestUnitLookupByFileExtensionInvalidExtension(t *testing.T) {
 }
 
 func TestUnitLookupByFileExtensionInvalidRootType(t *testing.T) {
-	_, err := mime.LookupByFileExtension(".csv", "test")
+	_, err := mime.LookupByFileExtension(mime.EXTENSION_CSV, mime.RootType("test"))
 
 	if err == nil {
 		t.Fatal("test did not recognize the invalid root MIME type")
@@ -108,7 +108,7 @@ Lookup by file extension - simple
 */
 
 func TestUnitLookupByFileExtensionSimpleApplication(t *testing.T) {
-	result, err := mime.LookupByFileExtensionSimple(".json")
+	result, err := mime.LookupByFileExtensionSimple(mime.EXTENSION_JSON)
 
 	if err != nil {
 		t.Fatal(err)
