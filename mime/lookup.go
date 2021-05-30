@@ -57,3 +57,31 @@ func LookupByFileExtension(extension string, rootType RootType) (mime string, er
 	notSupportedErrorMessage := fmt.Sprintf("provided extension is not supported - no associated MIME type for extension '%s'", extension)
 	return "", errors.New(notSupportedErrorMessage)
 }
+
+/*
+Finds the best MIME type based on the provided extension.
+
+May return a mime type from an inappropriate root type. To fix this, use mime.LookupByFileExtension to apply a root type scope.
+*/
+func LookupByFileExtensionSimple(extension string) (mime string, err error) {
+	// remove any period prefixes
+	extension = strings.Trim(extension, ".")
+
+	// get the best matching MIME type
+	for i := range MimeTypes {
+		if strings.Contains(MimeTypes[i].String(), extension) {
+			return MimeTypes[i].String(), nil
+		}
+	}
+
+	// use std 'mime' package as a backup
+	backupMIMEType := stdMime.TypeByExtension(fmt.Sprintf(".%s", extension))
+
+	if backupMIMEType != "" {
+		return backupMIMEType, nil
+	}
+
+	// return
+	notSupportedErrorMessage := fmt.Sprintf("provided extension is not supported - no associated MIME type for extension '%s'", extension)
+	return "", errors.New(notSupportedErrorMessage)
+}

@@ -6,6 +6,9 @@ import (
 	"gitlab.com/mwarnerdotme/go-mime/mime"
 )
 
+/*
+Lookup by file extension
+*/
 func TestUnitLookupByFileExtensionApplication(t *testing.T) {
 	result, err := mime.LookupByFileExtension(".json", mime.ROOT_TYPE_APPLICATION)
 
@@ -97,5 +100,22 @@ func TestUnitLookupByFileExtensionInvalidRootType(t *testing.T) {
 
 	if err == nil {
 		t.Fatal("test did not recognize the invalid root MIME type")
+	}
+}
+
+/*
+Lookup by file extension - simple
+*/
+
+func TestUnitLookupByFileExtensionSimpleApplication(t *testing.T) {
+	result, err := mime.LookupByFileExtensionSimple(".json")
+
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	expectedResult := "application/json"
+	if result != expectedResult {
+		t.Fatalf("an incorrect MIME type was returned: expected '%s' and received '%s'", expectedResult, result)
 	}
 }
